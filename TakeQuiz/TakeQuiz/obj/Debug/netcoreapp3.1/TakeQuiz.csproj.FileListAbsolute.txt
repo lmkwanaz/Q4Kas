@@ -1,0 +1,13 @@
+C:\Users\Neo.mkwanazi\source\repos\TakeQuiz\TakeQuiz\bin\Debug\netcoreapp3.1\TakeQuiz.exe
+C:\Users\Neo.mkwanazi\source\repos\TakeQuiz\TakeQuiz\bin\Debug\netcoreapp3.1\TakeQuiz.deps.json
+C:\Users\Neo.mkwanazi\source\repos\TakeQuiz\TakeQuiz\bin\Debug\netcoreapp3.1\TakeQuiz.runtimeconfig.json
+C:\Users\Neo.mkwanazi\source\repos\TakeQuiz\TakeQuiz\bin\Debug\netcoreapp3.1\TakeQuiz.runtimeconfig.dev.json
+C:\Users\Neo.mkwanazi\source\repos\TakeQuiz\TakeQuiz\bin\Debug\netcoreapp3.1\TakeQuiz.dll
+C:\Users\Neo.mkwanazi\source\repos\TakeQuiz\TakeQuiz\bin\Debug\netcoreapp3.1\TakeQuiz.pdb
+C:\Users\Neo.mkwanazi\source\repos\TakeQuiz\TakeQuiz\obj\Debug\netcoreapp3.1\TakeQuiz.csprojAssemblyReference.cache
+C:\Users\Neo.mkwanazi\source\repos\TakeQuiz\TakeQuiz\obj\Debug\netcoreapp3.1\TakeQuiz.csproj.CoreCompileInputs.cache
+C:\Users\Neo.mkwanazi\source\repos\TakeQuiz\TakeQuiz\obj\Debug\netcoreapp3.1\TakeQuiz.AssemblyInfoInputs.cache
+C:\Users\Neo.mkwanazi\source\repos\TakeQuiz\TakeQuiz\obj\Debug\netcoreapp3.1\TakeQuiz.AssemblyInfo.cs
+C:\Users\Neo.mkwanazi\source\repos\TakeQuiz\TakeQuiz\obj\Debug\netcoreapp3.1\TakeQuiz.dll
+C:\Users\Neo.mkwanazi\source\repos\TakeQuiz\TakeQuiz\obj\Debug\netcoreapp3.1\TakeQuiz.pdb
+C:\Users\Neo.mkwanazi\source\repos\TakeQuiz\TakeQuiz\obj\Debug\netcoreapp3.1\TakeQuiz.genruntimeconfig.cache
