@@ -1,0 +1,4 @@
+how to print in C#
+Console.WriteLine
+how tp get user input in c#
+Console.ReadLine
