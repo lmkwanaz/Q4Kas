@@ -55,14 +55,11 @@ namespace TakeQuiz
 
             Dictionary<string, string> checkAnanswer = new Dictionary<string, string>();
 
-
             foreach(string index in info.Keys)
             {
                 Console.WriteLine(index);
                 string answer = Console.ReadLine();
                 checkAnanswer.Add(index, answer);
-               // if(info.Contains(checkAnanswer)){
-
             }
 
 
@@ -89,10 +86,7 @@ namespace TakeQuiz
             Console.WriteLine("how many question do you want to write? please provide answers as well..");
             Console.WriteLine("or you want to go Study?... press 0");
             int NoofQuestions = Convert.ToInt32(Console.ReadLine());
-           // int gotoQuestion = Convert.ToInt32(Console.ReadLine());
-            //string str0 = null;
-            //string str1 = null;
-
+    
             if(NoofQuestions > 0)
             {
                 for (int index = 0; index < NoofQuestions; index++)
@@ -101,16 +95,11 @@ namespace TakeQuiz
                     string first = Console.ReadLine();
                     Console.WriteLine("what is an answer?");
                     string second = Console.ReadLine();
-                    //str0 = first;
-                    //str1 = second;
+                   
                     TakeasList.Add(first);
                     TakeasList.Add(second);
 
                     question = TakeasList.ToDictionary(x => x);
-
-                    
-                    //str0 = null;
-                    //str1 = null;
                 }
             }else if(NoofQuestions == 0)
             {
@@ -124,10 +113,8 @@ namespace TakeQuiz
             {
                 if (!File.Exists(path))
                 {
-
                     using (StreamWriter writeTofile = File.CreateText(path))
                     {
-
                         writeTofile.WriteLine(m);
                     }
                 }
@@ -198,7 +185,6 @@ namespace TakeQuiz
 
             Program accessToChosenNumber = new Program();
             Dictionary<string, string> info = new Dictionary<string, string>();
-            //List<string> ch = new List<string>();
 
             string file_path = @"C:\Users\Neo.mkwanazi\source\repos\TakeQuiz\TakeQuiz\bin\Debug\netcoreapp3.1\Cred\Credintial.txt";
 
