@@ -6,7 +6,7 @@ using System.Text;
 
 namespace TakeQuiz
 {
-    class ForFuss
+    class ForKuss
     {
 
         public void Study()
@@ -49,6 +49,20 @@ namespace TakeQuiz
             else
             {
                 Console.WriteLine("there's nothing in a File");
+                Console.WriteLine();
+                Console.WriteLine("do you want to add questions? ... press 1");
+                Console.WriteLine("do you want to exit? ... press 0");
+
+                int choose = Convert.ToInt32(Console.ReadLine());
+
+                if (choose == 1)
+                {
+                    ForKuss forKus = new ForKuss();
+                    forKus.Questions();
+                }else if (choose == 0)
+                {
+                    Console.WriteLine("Byeeee!!!");
+                }
             }
 
             Dictionary<string, string> checkAnanswer = new Dictionary<string, string>();
@@ -80,9 +94,12 @@ namespace TakeQuiz
         {
             Dictionary<string, string> question = new Dictionary<string, string>();
             List<string> TakeasList = new List<string>();
+            ForKuss pro = new ForKuss();
 
-            Console.WriteLine("how many question do you want to write? please provide answers as well..");
-            Console.WriteLine("or you want to go Study?... press 0");
+            Console.WriteLine("1.how many question do you want to write?");
+            Console.WriteLine("2. Do you want to go Study?... press 0");
+            Console.WriteLine("3. Do you want to delete the questions you have already?... -1");
+            
             int NoofQuestions = Convert.ToInt32(Console.ReadLine());
 
             if (NoofQuestions > 0)
@@ -102,9 +119,12 @@ namespace TakeQuiz
             }
             else if (NoofQuestions == 0)
             {
-                ForFuss pro = new ForFuss();
                 pro.Study();
+            }else if(NoofQuestions == -1)
+            {
+                pro.Delete();
             }
+
 
             string path = @"C:\Users\Neo.mkwanazi\source\repos\TakeQuiz\TakeQuiz\bin\Debug\netcoreapp3.1\Cred\Questions.txt";
 
@@ -131,6 +151,23 @@ namespace TakeQuiz
             }
 
             return question;
+        }
+
+        public void Delete()
+        {
+            string path = @"C:\Users\Neo.mkwanazi\source\repos\TakeQuiz\TakeQuiz\bin\Debug\netcoreapp3.1\Cred\Questions.txt";
+
+
+            if (File.Exists(path))
+                {
+                    File.Delete(path);
+                    Console.WriteLine("File Deleted");
+                }
+                else
+                {
+                    Console.WriteLine("the file doesn't exists.");
+                }
+            
         }
 
     }

@@ -13,7 +13,8 @@ namespace TakeQuiz
         {
 
             Validation accessToChosenNumber = new Validation();
-            ForFuss forKuss = new ForFuss();
+            ForKuss forKuss = new ForKuss();
+            Administrator admin = new Administrator();
             Dictionary<string, string> info = new Dictionary<string, string>();
 
             string file_path = @"C:\Users\Neo.mkwanazi\source\repos\TakeQuiz\TakeQuiz\bin\Debug\netcoreapp3.1\Cred\Credintial.txt";
@@ -63,7 +64,17 @@ namespace TakeQuiz
 
                     foreach (string i in changeListToDictionary.Keys)
                     {
-                        var check = (info.ContainsKey(i)) ? throw new Exception($"{i} already exist") : info = changeListToDictionary;
+                        
+                        if (info.ContainsKey(i))
+                        {
+                            Console.WriteLine($"{i} already exist");
+                            info.Clear();
+                        }
+                        else
+                        {
+                            info = changeListToDictionary;
+                        }
+
                         break;
                     }
                     break;
@@ -91,6 +102,12 @@ namespace TakeQuiz
                         }
                     }
 
+                    break;
+                case 3:
+                    admin.Admin();
+                    break;
+                case 4:
+                    admin.Delete();
                     break;
                 default:
                     Console.WriteLine("invalid input");
