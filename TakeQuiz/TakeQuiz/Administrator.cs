@@ -7,7 +7,7 @@ using System.Text;
 
 namespace TakeQuiz
 {
-    class Administrator
+    public class Administrator
     {
 
         public void Admin()
@@ -16,44 +16,102 @@ namespace TakeQuiz
             Hash hash = new Hash();
             Dictionary<string, string> info = new Dictionary<string, string>();
             List<string> credintials = new List<string>();
+            Validation validate = new Validation();
 
             string path = @"C:\Users\Neo.mkwanazi\source\repos\TakeQuiz\TakeQuiz\bin\Debug\netcoreapp3.1\Cred\Admin.txt";
 
-            Console.WriteLine("Enter username");
-            string username = Console.ReadLine();
-            Console.WriteLine("Enter username");
-            string password = Console.ReadLine();
-            
-            string hashedData = hash.ComputeSha256Hash1(password);
-            credintials.Add(username);
-            credintials.Add(hashedData);
-
-              info = credintials.ToDictionary(x => x);
-
-            foreach (string m in info.Keys)
+            if (File.Exists(path))
             {
-                if (!File.Exists(path))
+                var logFile = File.ReadAllLines(path);
+                var logList = new List<string>(logFile);
+                string list0 = null;
+                string list1 = null;
+
+                foreach (string f in logList)
                 {
-                    using (StreamWriter writeTofile = File.CreateText(path))
+                    if (list0 == null)
                     {
-
-                        writeTofile.WriteLine(m);
+                        list0 = f;
                     }
-
+                    else
+                    {
+                        try
+                        {
+                            list1 = f;
+                            info.Add(list0, list1);
+                            list0 = null;
+                            list1 = null;
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+                    }
                 }
-                else if (File.Exists(path))
+            }
+
+            var list = validate.Sign_In();
+            //Console.WriteLine("Enter username");
+            //string username = Console.ReadLine();
+            //Console.WriteLine("Enter password");
+            //string password = Console.ReadLine();
+            
+            //string hashedData = hash.ComputeSha256Hash1(password);
+            //credintials.Add(username);
+            //credintials.Add(hashedData);
+
+            //  info = credintials.ToDictionary(x => x);
+
+            string str0 = null;
+            string str1 = null;
+            foreach (string f in list) { var check = (str0 == null) ? str0 = f : str1 = f; }
+
+            Dictionary<string, string> newDictioanry = new Dictionary<string, string>();
+
+            newDictioanry.Add(str0, str1);
+
+            Dictionary<string, string> anotherDictionary4Writing = new Dictionary<string, string>();
+
+            anotherDictionary4Writing = list.ToDictionary(x => x);
+
+            foreach (KeyValuePair<string, string> pair in newDictioanry)
+            {
+                if (!info.Contains(pair))
                 {
-                    using (StreamWriter writeAgain = File.AppendText(path))
+                    foreach (string m in anotherDictionary4Writing.Keys)
                     {
-                        writeAgain.WriteLine(m);
-                        Console.WriteLine("User has been added");
-                    }
+                        if (!File.Exists(path))
+                        {
+                            using (StreamWriter writeTofile = File.CreateText(path))
+                            {
+
+                                writeTofile.WriteLine(m);
+                            }
+
+                        }
+                        else if (File.Exists(path))
+                        {
+                            using (StreamWriter writeAgain = File.AppendText(path))
+                            {
+                                writeAgain.WriteLine(m);
+                                Console.WriteLine("User has been added");
+                            }
+                        }
+                    } 
                 }
                 else
                 {
-                    Console.WriteLine("the file doesn't exists.");
+                    Console.WriteLine($"{pair} already exist!");
+                    info.Clear();
+                    newDictioanry.Clear();
+                    anotherDictionary4Writing.Clear();
+                   
                 }
             }
+
+            info.Clear();
+            newDictioanry.Clear();
+            anotherDictionary4Writing.Clear();
 
         }
 
@@ -63,7 +121,7 @@ namespace TakeQuiz
             Validation validation = new Validation();
             Dictionary<string, string> info = new Dictionary<string, string>();
 
-            string file_path = @"C:\Users\Neo.mkwanazi\source\repos\TakeQuiz\TakeQuiz\bin\Debug\netcoreapp3.1\Cred\Admin.txt";
+            string file_path = @"C:\Users\Neo.mkwanazi\source\repos\TakeQuiz\TakeQuiz\bin\Debug\netcoreapp3.1\Cred\Credintial.txt";
 
             if (File.Exists(file_path))
             {
@@ -122,8 +180,8 @@ namespace TakeQuiz
                 }
                 else
                 {
-                    info.Clear();
                     Console.WriteLine($"{pair} does not exist!");
+                    info.Clear();
                 }
             }
 

@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 
 namespace TakeQuiz
 {
-    class Validation
+   public  class Validation
     {
         public List<string> Sign_Up()
         {
@@ -29,6 +29,7 @@ namespace TakeQuiz
             var match = Regex.Match(password, regex, RegexOptions.None);
 
             string hashedData = hash.ComputeSha256Hash1(password);
+         
 
 
             if (match.Success)

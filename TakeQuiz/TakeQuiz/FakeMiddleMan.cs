@@ -6,7 +6,7 @@ using System.Text;
 
 namespace TakeQuiz
 {
-    class FakeMiddleMan
+   public  class FakeMiddleMan
     {
 
         public void MiddleManofSign_Up_In(int chosenNumber)
@@ -105,9 +105,11 @@ namespace TakeQuiz
                     break;
                 case 3:
                     admin.Admin();
+                    info.Clear();
                     break;
                 case 4:
                     admin.Delete();
+                    info.Clear();
                     break;
                 default:
                     Console.WriteLine("invalid input");

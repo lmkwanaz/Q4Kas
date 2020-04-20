@@ -1,0 +1,2 @@
+how to print in C#?
+Console.WriteLine()

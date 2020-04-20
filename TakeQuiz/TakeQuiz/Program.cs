@@ -8,13 +8,11 @@ using System.Linq.Expressions;
 
 namespace TakeQuiz
 {
-    class Program
+   public class Program
     {
-        static void Main(string[] args)
+       public static void Main(string[] args)
         {
             FakeMiddleMan pro = new FakeMiddleMan();
-
-            Dictionary<string, int> info = new Dictionary<string, int>();
 
             Console.WriteLine("Sign Up? Press 1");
             Console.WriteLine("Sign in? Press 2");
