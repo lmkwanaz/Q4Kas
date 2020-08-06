@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Neo.mkwanazi\\source\\repos\\TakeQuiz\\TakeQuiz\\TakeQuiz.csproj",
+      "projectUniqueName": "C:\\Users\\Neo.mkwanazi\\NeoTutorials\\Q4Kas\\TakeQuiz\\TakeQuiz\\TakeQuiz.csproj",
       "projectName": "TakeQuiz",
-      "projectPath": "C:\\Users\\Neo.mkwanazi\\source\\repos\\TakeQuiz\\TakeQuiz\\TakeQuiz.csproj",
+      "projectPath": "C:\\Users\\Neo.mkwanazi\\NeoTutorials\\Q4Kas\\TakeQuiz\\TakeQuiz\\TakeQuiz.csproj",
       "packagesPath": "C:\\Users\\Neo.mkwanazi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Neo.mkwanazi\\source\\repos\\TakeQuiz\\TakeQuiz\\obj\\",
+      "outputPath": "C:\\Users\\Neo.mkwanazi\\NeoTutorials\\Q4Kas\\TakeQuiz\\TakeQuiz\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -63,7 +63,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
